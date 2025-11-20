@@ -5,17 +5,17 @@ const person: Person = {
     firstName: "Paulis",
     lastName: "Gributs",
     name: `Paulis Gributs`,
-    role: "Senior Fullstack Developer",
+    role: "Développeur Fullstack Senior",
     avatar: "/images/avatar.jpg",
     email: "paulis@gributs.com",
     location: "Europe/Paris", // Expecting the IANA time zone identifier, e.g. 'Europe/Vienna'
-    languages: ["English", "French"], // optional: Leave the array empty if you don't want to display languages
+    languages: ["Anglais", "Français"], // optional: Leave the array empty if you don't want to display languages
 };
 
 const newsletter: Newsletter = {
     display: false,
-    title: <>Subscribe to {person.firstName}'s Newsletter</>,
-    description: <>My weekly newsletter about creativity and engineering</>,
+    title: <>Abonnez-vous à la Newsletter de {person.firstName}</>,
+    description: <>Ma newsletter hebdomadaire sur la créativité et l'ingénierie</>,
 };
 
 const social: Social = [
@@ -51,10 +51,10 @@ const social: Social = [
 const home: Home = {
     path: "/",
     image: "/images/og/home.png",
-    label: "Home",
-    title: `${person.name}'s Portfolio`,
-    description: `Portfolio website showcasing my work as a ${person.role}`,
-    headline: <>Building your vision from the ground up</>,
+    label: "Accueil",
+    title: `Portfolio de ${person.name}`,
+    description: `Site web portfolio présentant mon travail en tant que ${person.role}`,
+    headline: <>Construire votre vision à partir de zéro</>,
     featured: {
         display: true,
         title: (
@@ -62,7 +62,7 @@ const home: Home = {
                 <strong className="ml-4">VSB</strong>{" "}
                 <Line background="brand-alpha-strong" vert height="20"/>
                 <Text marginRight="4" onBackground="brand-medium">
-                    Featured work
+                    Projet en vedette
                 </Text>
             </Row>
         ),
@@ -70,17 +70,17 @@ const home: Home = {
     },
     subline: (
         <>
-            I'm Paulis, a freelance Senior Fullstack Developer
-            <br/>Turning Complex Problems into Intuitive, Data-Driven Experiences
+            Je suis Paulis, Développeur Fullstack Senior freelance
+            <br/>Transformer les Problèmes Complexes en Expériences Intuitives et Axées sur les Données
         </>
     ),
 };
 
 const about: About = {
     path: "/about",
-    label: "About",
-    title: `About – ${person.name}`,
-    description: `Meet ${person.name}, ${person.role} from ${person.location}`,
+    label: "À propos",
+    title: `À propos – ${person.name}`,
+    description: `Rencontrez ${person.name}, ${person.role} de ${person.location}`,
     tableOfContent: {
         display: true,
         subItems: false,
@@ -97,33 +97,33 @@ const about: About = {
         title: "Introduction",
         description: (
             <>
-                I am a software engineer with a passion for building intelligent,
-                full-stack applications that bridge the gap between cutting-edge research
-                and real-world impact. My expertise spans from developing and deploying AI
-                systems to managing complex projects for global audiences, such as leading a
-                team for an Android app with over 120 million users.
+                Je suis un ingénieur logiciel passionné par la création d'applications
+                intelligentes et full-stack qui comblent le fossé entre la recherche de
+                pointe et l'impact dans le monde réel. Mon expertise s'étend du développement
+                et du déploiement de systèmes d'IA à la gestion de projets complexes pour un
+                public mondial, comme la direction d'une équipe pour une application Android
+                comptant plus de 120 millions d'utilisateurs.
             </>
         ),
     },
     work: {
         display: true, // set to false to hide this section
-        title: "Work Experience",
+        title: "Expérience professionnelle",
         experiences: [
             {
                 company: "LERO/Open University",
                 timeframe: "2023 - 2024",
-                role: "Senior Research Software Engineer",
+                role: "Ingénieur Logiciel de Recherche Senior",
                 achievements: [
                     <>
-                        Published research paper with university team maintaining 82% excellence rate.
+                        Publication d'un article de recherche avec l'équipe universitaire maintenant un taux d'excellence de 82%.
                     </>,
                     <>
-                        Built full-stack application from scratch using Flutter, Python & MongoDB to track user values
-                        via purchasing
-                        habits.
+                        Développement d'une application full-stack à partir de zéro en utilisant Flutter, Python et MongoDB
+                        pour suivre les valeurs des utilisateurs via leurs habitudes d'achat.
                     </>,
                     <>
-                        Integrated LLM AI recommender system increasing user satisfaction by 35%.
+                        Intégration d'un système de recommandation IA LLM augmentant la satisfaction des utilisateurs de 35%.
                     </>
                 ],
                 images: [
@@ -151,17 +151,16 @@ const about: About = {
             {
                 company: <a href="https://wikipedia.org/wiki/YouTube_Vanced" target="_blank">Youtube Vanced (Google CA)</a>,
                 timeframe: "2018 - 2022",
-                role: "Lead Developer",
+                role: "Développeur Principal",
                 achievements: [
                     <>
-                        Managed developer team for Android applications serving 120M+ users.
+                        Gestion d'une équipe de développeurs pour des applications Android desservant plus de 120 millions d'utilisateurs.
                     </>,
                     <>
-                        Collaborated with sponsors (Brave, Adguard) and YouTube-related teams.
+                        Collaboration avec des sponsors (Brave, Adguard) et des équipes liées à YouTube.
                     </>,
                     <>
-                        Performed Java Small code decompilation and developed backends using C#
-                        Projects.
+                        Décompilation de code Java Smali et développement de backends en utilisant des projets C#.
                     </>,
                 ],
                 images: [],
@@ -169,16 +168,16 @@ const about: About = {
             {
                 company: "Intel®",
                 timeframe: "2021 - 2022",
-                role: "Software Engineer Intern",
+                role: "Stagiaire Ingénieur Logiciel",
                 achievements: [
                     <>
-                        Contributed to DPDK framework and enhanced testing suite in SCRUM team.
+                        Contribution au framework DPDK et amélioration de la suite de tests en équipe SCRUM.
                     </>,
                     <>
-                        Resolved production bugs and handled regression testing.
+                        Résolution de bugs de production et gestion des tests de régression.
                     </>,
                     <>
-                        Contributed to 20+ Pull Requests via Git; led team to 2nd place in Intel STEM Challenge.
+                        Contribution à plus de 20 Pull Requests via Git ; direction de l'équipe à la 2ème place du Intel STEM Challenge.
                     </>
                 ],
             },
@@ -186,30 +185,30 @@ const about: About = {
     },
     studies: {
         display: true, // set to false to hide this section
-        title: "Studies",
+        title: "Études",
         institutions: [
             {
-                name: "University of Limerick BSc in Computer Systems, GPA: 3.9/4.0 (2019 - 2023)",
+                name: "University of Limerick BSc en Systèmes Informatiques, GPA: 3.9/4.0 (2019 - 2023)",
                 description: <ul>
-                    <li>Awarded President’s Volunteer Award for contributions to Environmental Society</li>
-                    <li>Tutored fellow students in computer science curriculum</li>
-                    <li>Thesis: Developed Sentiment Analysis Application to track user mood via text messages</li>
+                    <li>Récompensé par le Prix du Bénévole du Président pour ses contributions à la Société Environnementale</li>
+                    <li>Tutorat de camarades étudiants dans le programme d'informatique</li>
+                    <li>Thèse : Développement d'une application d'analyse de sentiment pour suivre l'humeur des utilisateurs via les messages texte</li>
                 </ul>,
             },
             {
                 name: "Université Paul Valéry (2025)",
-                description: <>Improved my French level to B1 through IEFE.</>,
+                description: <>Amélioration de mon niveau de français à B1 grâce à l'IEFE.</>,
             },
         ],
     },
     technical: {
         display: true, // set to false to hide this section
-        title: "Technical skills",
+        title: "Compétences techniques",
         skills: [
             {
-                title: "Mobile Applications",
+                title: "Applications mobiles",
                 description: (
-                    [<>Created Several Mobile Applications including their backends;</>,
+                    [<>Création de plusieurs applications mobiles incluant leurs backends;</>,
                         <br/>,
                         <a href="https://play.google.com/store/apps/details?id=com.kevinx8.negate" target="_blank">Negate</a>,
                         <br/>,
@@ -259,12 +258,11 @@ const about: About = {
                 ],
             },
             {
-                title: "Autonomous Programs",
+                title: "Programmes autonomes",
                 description: (
-                    [<>Able to build Backends and Discord Bots with 99.99% uptime.</>,
+                    [<>Capable de créer des backends et des bots Discord avec 99,99% de disponibilité.</>,
                         <br/>,
-                        <a href="https://codefling.com/discord-bots/update-checker-bot" target="_blank">Link to an example bot of
-                            mine.</a>]
+                        <a href="https://codefling.com/discord-bots/update-checker-bot" target="_blank">Lien vers un exemple de bot que j'ai créé.</a>]
                 ),
                 tags: [
                     {
@@ -295,11 +293,11 @@ const about: About = {
                 ],
             },
             {
-                title: "Plugins & Backends",
+                title: "Plugins et Backends",
                 description: ([
-                        <>Writing Plugins and Backend Applications in C# since 2018.</>,
+                        <>Écriture de plugins et d'applications backend en C# depuis 2018.</>,
                         <br/>,
-                        <a href="https://magicservices.co/" target="_blank">Contracted developer on Magic Services.</a>
+                        <a href="https://magicservices.co/" target="_blank">Développeur sous contrat chez Magic Services.</a>
                     ]
                 ),
                 tags: [
@@ -320,9 +318,9 @@ const about: About = {
             {
                 title: "Frontends",
                 description: ([
-                        <>Building robust websites using Vite, Next.js and React.js.</>,
+                        <>Création de sites web robustes en utilisant Vite, Next.js et React.js.</>,
                         <br/>,
-                        <a href="https://attraperevesint.fr/" target="_blank">Link to a client's site.</a>
+                        <a href="https://attraperevesint.fr/" target="_blank">Lien vers le site d'un client.</a>
                     ]
                 ),
                 tags: [
@@ -356,26 +354,26 @@ const about: About = {
 const blog: Blog = {
     path: "/blog",
     label: "Blog",
-    title: "Writing about design and tech...",
-    description: `Read what ${person.name} has been up to recently`,
+    title: "Écrire sur le design et la technologie...",
+    description: `Découvrez ce que ${person.name} a fait récemment`,
     // Create new blog posts by adding a new .mdx file to app/blog/posts
     // All posts will be listed on the /blog route
 };
 
 const work: Work = {
     path: "/work",
-    label: "Work",
-    title: `Projects – ${person.name}`,
-    description: `Design and dev projects by ${person.name}`,
+    label: "Travail",
+    title: `Projets – ${person.name}`,
+    description: `Projets de design et développement par ${person.name}`,
     // Create new project pages by adding a new .mdx file to app/blog/posts
     // All projects will be listed on the /home and /work routes
 };
 
 const gallery: Gallery = {
     path: "/gallery",
-    label: "Gallery",
-    title: `Photo gallery – ${person.name}`,
-    description: `A photo collection by ${person.name}`,
+    label: "Galerie",
+    title: `Galerie photo – ${person.name}`,
+    description: `Une collection de photos par ${person.name}`,
     // Images by https://lorant.one
     // These are placeholder images, replace with your own
     images: [

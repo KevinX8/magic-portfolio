@@ -1,45 +1,46 @@
 ---
-title: "Value Shopping Basket: An App for tracking your shopping habits compared to your personal values"
+title: "Value Shopping Basket : Une application pour suivre vos habitudes d'achat par rapport à vos valeurs personnelles"
 publishedAt: "2024-02-01"
-summary: "Flutter + Node.js Implementation of the Values@Runtime Research Paper for Open University"
+summary: "Implémentation Flutter + Node.js du document de recherche Values@Runtime pour l'Open University"
 images:
   - "/images/projects/project-01/vsb.png"
 team:
   - name: "Paulis Gributs"
-    role: "Software Engineer"
-    avatar: "/images/avatar.jpg"
-    linkedIn: "https://www.linkedin.com/in/paulis-gributs/"
+role: "Ingénieur Logiciel"
+avatar: "/images/avatar.jpg"
+linkedIn: "https://www.linkedin.com/in/paulis-gributs/"
 link: "https://value-shopping-basket.codemagic.app/"
 ---
 
-## Overview
+## Aperçu
 
-Value Shopping Basket Application, was developed to create a framework for articulating, measuring, and reflecting on values within user-centric software. I built a robust, full-stack application with the core purpose of tracking my purchasing habits and seeing how well they aligned with my established ethical and personal values.
-The system is split into two main components: a frontend written in Flutter and a backend written in Node.js. This architecture allowed for the full integration of user values throughout the process, from finding products that matched my ethics to calculating the final price of the basket.
+L'application Value Shopping Basket a été développée pour créer un cadre permettant d'articuler, de mesurer et de réfléchir sur les valeurs au sein de logiciels centrés sur l'utilisateur. J'ai construit une application full-stack robuste avec pour objectif principal de suivre mes habitudes d'achat et de voir à quel point elles s'alignaient avec mes valeurs éthiques et personnelles établies.
+Le système est divisé en deux composants principaux : un frontend écrit en Flutter et un backend écrit en Node.js. Cette architecture a permis l'intégration complète des valeurs de l'utilisateur tout au long du processus, de la recherche de produits correspondant à mon éthique au calcul du prix final du panier.
 
-## Key Features
+## Fonctionnalités principales
 
-- **Customizable Value Refinement**: I implemented a system that allows users to concretize their values in terms of attributes and instantiations. I could categorize attributes using a colour system: Green (Required) for values I strongly adhered to (e.g., vegan food), Yellow (Preference) for items I preferred but were not mandatory (e.g., locally sourced food), and Red if I had no preference.
-- **AI Recommendation System**: To ensure alignment, the application provides recommended alternative food products that better match my values if a chosen item fails the specified attribute checks.
-- **Historical Tracking**: The history section provides a basket-by-basket display of all saved shopping instances, showing the percentage of products that failed the value checks. Each product is visually coded: green for passed values, yellow for failing only preferences, and red for failing one or more requirements.
-- **Physical Shopping Support**: I included optional location permissions to calculate the "distance from origin" attribute and display the supermarket location where the basket was generated. I also integrated a barcode scanning feature using the camera permission for use during actual shopping trips.
-- **Data Security**: I leveraged Firebase for user login and Firebase Firestore to securely store my previous baskets and personal value configurations linked to my account.
-## Technologies Used
+- **Raffinement personnalisable des valeurs** : J'ai implémenté un système qui permet aux utilisateurs de concrétiser leurs valeurs en termes d'attributs et d'instanciations. Je pouvais catégoriser les attributs en utilisant un système de couleurs : Vert (Requis) pour les valeurs auxquelles j'adhérais fortement (par exemple, nourriture végane), Jaune (Préférence) pour les articles que je préférais mais qui n'étaient pas obligatoires (par exemple, nourriture d'origine locale), et Rouge si je n'avais pas de préférence.
+- **Système de recommandation IA** : Pour garantir l'alignement, l'application fournit des produits alimentaires alternatifs recommandés qui correspondent mieux à mes valeurs si un article choisi échoue aux vérifications d'attributs spécifiés.
+- **Suivi historique** : La section historique fournit un affichage panier par panier de toutes les instances d'achat enregistrées, montrant le pourcentage de produits qui ont échoué aux vérifications de valeurs. Chaque produit est codé visuellement : vert pour les valeurs réussies, jaune pour l'échec uniquement des préférences, et rouge pour l'échec d'une ou plusieurs exigences.
+- **Support d'achat physique** : J'ai inclus des permissions de localisation optionnelles pour calculer l'attribut "distance depuis l'origine" et afficher l'emplacement du supermarché où le panier a été généré. J'ai également intégré une fonctionnalité de scan de codes-barres utilisant la permission de la caméra pour une utilisation lors des courses réelles.
+- **Sécurité des données** : J'ai exploité Firebase pour la connexion utilisateur et Firebase Firestore pour stocker en toute sécurité mes paniers précédents et mes configurations de valeurs personnelles liées à mon compte.
 
-- **Frontend (Cross-Platform)**: I chose Flutter/Dart for the frontend. This cross-platform language allowed me to create an application compatible with iOS, Android, and Web platforms from a single codebase, making the application easier to use for subsequent evaluation.
-- **Backend Server**: The backend logic was handled by Node.js, selected for its rapid development time and ease of integrating multiple different services required for value integration.
-- **Database**: The core food data uses MongoDB as the main source of information, Open Food Facts, which already supplied its large dataset in a NoSQL format. This NoSQL approach was optimal given the weak relationships between the millions of food products, enabling faster queries and lower storage usage compared to a traditional SQL system.
-- **API Connection**: I used GraphQL for the backend connection. It proved more versatile than a traditional REST approach by allowing filtering of return values and providing return types for superior error handling, working seamlessly with the NoSQL schema.
-- **Intelligent Recommendations**: Due to the large size of the dataset (around 3 million products) and the lack of comprehensive tags/attributes in the source data, I implemented a large language model. I used ChatGPT (OpenAI API) to provide five "healthier" alternatives to a given product, leveraging its training on vast amounts of product data.
-- **Data Tools**: Python was used for generating the initial MongoDB database from Open Food Facts data and for executing necessary data analysis tools.
+## Technologies utilisées
 
-## Challenges and Learnings
+- **Frontend (multiplateforme)** : J'ai choisi Flutter/Dart pour le frontend. Ce langage multiplateforme m'a permis de créer une application compatible avec les plateformes iOS, Android et Web à partir d'une seule base de code, rendant l'application plus facile à utiliser pour l'évaluation ultérieure.
+- **Serveur backend** : La logique backend a été gérée par Node.js, sélectionné pour son temps de développement rapide et sa facilité d'intégration de plusieurs services différents requis pour l'intégration des valeurs.
+- **Base de données** : Les données alimentaires principales utilisent MongoDB comme source principale d'information, Open Food Facts, qui fournissait déjà son grand ensemble de données dans un format NoSQL. Cette approche NoSQL était optimale compte tenu des relations faibles entre les millions de produits alimentaires, permettant des requêtes plus rapides et une utilisation de stockage inférieure par rapport à un système SQL traditionnel.
+- **Connexion API** : J'ai utilisé GraphQL pour la connexion backend. Il s'est avéré plus polyvalent qu'une approche REST traditionnelle en permettant le filtrage des valeurs de retour et en fournissant des types de retour pour une gestion d'erreurs supérieure, fonctionnant parfaitement avec le schéma NoSQL.
+- **Recommandations intelligentes** : En raison de la grande taille de l'ensemble de données (environ 3 millions de produits) et du manque de balises/attributs complets dans les données sources, j'ai implémenté un grand modèle de langage. J'ai utilisé ChatGPT (API OpenAI) pour fournir cinq alternatives "plus saines" à un produit donné, exploitant son entraînement sur de vastes quantités de données de produits.
+- **Outils de données** : Python a été utilisé pour générer la base de données MongoDB initiale à partir des données Open Food Facts et pour exécuter les outils d'analyse de données nécessaires.
 
-- **Handling Massive Data Comparisons**: The sheer scale of the Open Food Facts dataset meant that comparing all 3 million products using a traditional algorithmic approach was computationally infeasible during a query. This constraint was what prompted my shift toward the LLM API for dynamic recommendations.
-- **LLM Prompt Engineering**: I encountered challenges when attempting to incorporate detailed attributes and values directly into the ChatGPT prompt, which often caused the model to enter a generation loop and fail to return results. I learned that simplifying the prompt was crucial, leading to much more reliable and useful alternative suggestions.
-- **Data Fragmentation**: I had to integrate data from multiple sources; while Open Food Facts provided product information, I needed to fetch images separately through the Open Food Facts API and incorporate live pricing information (using prices from ASDA UK) to provide a comprehensive, functional shopping experience.
+## Défis et apprentissages
 
-## Outcome
+- **Gestion des comparaisons de données massives** : L'ampleur considérable de l'ensemble de données Open Food Facts signifiait que comparer tous les 3 millions de produits en utilisant une approche algorithmique traditionnelle était informatiquement infaisable lors d'une requête. Cette contrainte est ce qui a motivé mon passage vers l'API LLM pour des recommandations dynamiques.
+- **Ingénierie de prompt LLM** : J'ai rencontré des défis lors de la tentative d'incorporer des attributs et valeurs détaillés directement dans le prompt ChatGPT, ce qui causait souvent au modèle d'entrer dans une boucle de génération et d'échouer à retourner des résultats. J'ai appris que simplifier le prompt était crucial, conduisant à des suggestions alternatives beaucoup plus fiables et utiles.
+- **Fragmentation des données** : J'ai dû intégrer des données provenant de plusieurs sources ; bien qu'Open Food Facts fournissait des informations sur les produits, je devais récupérer les images séparément via l'API Open Food Facts et incorporer des informations de tarification en direct (en utilisant les prix d'ASDA UK) pour fournir une expérience d'achat complète et fonctionnelle.
 
-The Value Shopping Basket Application successfully functioned as a proof-of-concept for the [Values@Runtime](https://ieeexplore.ieee.org/document/10173877) research, demonstrating that providing recommendations leads to better alignment with user values.
-The resulting architecture effectively combined multiple modern technologies—Flutter, GraphQL, MongoDB, and an external LLM—into a coherent, high-performance system. The integration of the LLM recommender system was highly effective, contributing to a reported 35% increase in user satisfaction. The implementation process provided significant experience in handling large NoSQL datasets and integrating advanced AI capabilities into a production-ready application.
+## Résultat
+
+L'application Value Shopping Basket a fonctionné avec succès comme preuve de concept pour la recherche [Values@Runtime](https://ieeexplore.ieee.org/document/10173877), démontrant que fournir des recommandations conduit à un meilleur alignement avec les valeurs de l'utilisateur.
+L'architecture résultante a efficacement combiné plusieurs technologies modernes—Flutter, GraphQL, MongoDB et un LLM externe—dans un système cohérent et performant. L'intégration du système de recommandation LLM a été très efficace, contribuant à une augmentation rapportée de 35% de la satisfaction des utilisateurs. Le processus d'implémentation a fourni une expérience significative dans la gestion de grands ensembles de données NoSQL et l'intégration de capacités IA avancées dans une application prête pour la production.

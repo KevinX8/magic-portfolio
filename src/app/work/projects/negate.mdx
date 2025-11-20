@@ -1,47 +1,47 @@
 ---
-title: "Negate: Automated Mood Tracking via Sentiment Analysis"
+title: "Negate : Suivi automatisé de l'humeur via l'analyse de sentiment"
 publishedAt: "2023-03-01"
-summary: "A mental wellness application designed to track my overall mood (negativity or positivity) by monitoring app usage and analysing the tone of messages I type using a Natural Language Processing AI"
+summary: "Une application de bien-être mental conçue pour suivre mon humeur globale (négativité ou positivité) en surveillant l'utilisation des applications et en analysant le ton des messages que je tape à l'aide d'une IA de traitement du langage naturel"
 images:
   - "/images/projects/project-01/negate.png"
 team:
   - name: "Paulis Gributs"
-    role: "Software Engineer"
-    avatar: "/images/avatar.jpg"
-    linkedIn: "https://www.linkedin.com/in/paulis-gributs/"
+role: "Ingénieur Logiciel"
+avatar: "/images/avatar.jpg"
+linkedIn: "https://www.linkedin.com/in/paulis-gributs/"
 link: "https://github.com/KevinX8/Negate"
 ---
 
-## Overview
+## Aperçu
 
-My final year project, Negate – Automated Mood Tracking, is fundamentally a mental wellness application designed to evaluate how my interaction with digital devices affects my mental wellbeing in terms of overall mood, measured as negativity or positivity.
-The core of the application relies on monitoring the tone of messages I type. This text is processed using a Natural Language Processing (NLP) AI to calculate a positivity or negativity score for the given sentence. My overall goal was to leverage the collected data to bring awareness to the mental health effects certain applications are having on me. I implemented Negate to be fully functional across Windows and Android platforms, ensuring accurate cross-device tracking.
+Mon projet de dernière année, Negate – Suivi automatisé de l'humeur, est fondamentalement une application de bien-être mental conçue pour évaluer comment mon interaction avec les appareils numériques affecte mon bien-être mental en termes d'humeur globale, mesurée comme négativité ou positivité.
+Le cœur de l'application repose sur la surveillance du ton des messages que je tape. Ce texte est traité à l'aide d'une IA de traitement du langage naturel (NLP) pour calculer un score de positivité ou de négativité pour la phrase donnée. Mon objectif global était d'exploiter les données collectées pour sensibiliser aux effets sur la santé mentale que certaines applications ont sur moi. J'ai implémenté Negate pour être entièrement fonctionnel sur les plateformes Windows et Android, garantissant un suivi précis entre appareils.
 
-## Key Features
+## Fonctionnalités principales
 
-- **On-Device Sentiment Processing**: I mandated that all sentence processing and sentiment analysis must be performed entirely on-device using TensorFlow Lite. This was a non-negotiable step to maintain absolute user privacy, ensuring that sensitive, logged sentences never leave the device.
-- **Intuitive Visualisation**: I developed two main visual tools: the Hourly Sentiment UI, which uses coloured bars (from dark green for highly positive to dark red for highly negative) to show hourly sentiment averages, and the Daily Sentiment UI, a pie chart breakdown showing app usage time grouped into green (positive) and red (negative) categories.
-- **Recommendations Feature**: This feature displays the top 5 apps with the highest average positivity score and the bottom 5 apps with the lowest score, typically aggregated over the past 7 days. This provides me with tangible data on which apps I might want to avoid or use more often.
-- **Customisation and Control**: Users can fully configure an application blacklist to exclude applications like system utilities or keyboard apps from the analysis, ensuring the sentiment data is relevant.
-- **Mobile Translation Capability**: Specifically for Android, I integrated ML Kit to translate non-English sentences locally before sentiment analysis, which significantly broadened the potential audience for the app.
+- **Traitement du sentiment sur l'appareil** : J'ai exigé que tout le traitement des phrases et l'analyse de sentiment soient effectués entièrement sur l'appareil en utilisant TensorFlow Lite. C'était une étape non négociable pour maintenir une confidentialité absolue de l'utilisateur, garantissant que les phrases sensibles enregistrées ne quittent jamais l'appareil.
+- **Visualisation intuitive** : J'ai développé deux outils visuels principaux : l'interface de sentiment horaire, qui utilise des barres colorées (du vert foncé pour très positif au rouge foncé pour très négatif) pour montrer les moyennes de sentiment horaires, et l'interface de sentiment quotidien, une répartition en graphique circulaire montrant le temps d'utilisation des applications regroupé en catégories vertes (positives) et rouges (négatives).
+- **Fonctionnalité de recommandations** : Cette fonctionnalité affiche les 5 applications avec le score de positivité moyen le plus élevé et les 5 applications avec le score le plus bas, généralement agrégées sur les 7 derniers jours. Cela me fournit des données tangibles sur les applications que je pourrais vouloir éviter ou utiliser plus souvent.
+- **Personnalisation et contrôle** : Les utilisateurs peuvent entièrement configurer une liste noire d'applications pour exclure les applications comme les utilitaires système ou les applications de clavier de l'analyse, garantissant que les données de sentiment sont pertinentes.
+- **Capacité de traduction mobile** : Spécifiquement pour Android, j'ai intégré ML Kit pour traduire localement les phrases non anglaises avant l'analyse de sentiment, ce qui a considérablement élargi le public potentiel de l'application.
 
-## Technologies Used
+## Technologies utilisées
 
-- **Front-end and Cross-Platform Development**: I developed the entire application using Dart and Flutter. I chose Flutter because it compiles efficiently to both Windows and Android without requiring major code changes, while still allowing me to utilize native system APIs easily for core functionality.
-- **Natural Language Processing (NLP)**: TensorFlow Lite was my choice for machine learning. It fully supports all Flutter platforms and, crucially, operates entirely offline and locally on the device, upholding the strict privacy requirement. I used a binary sentiment classification model trained on approximately 50,000 positive and negative movie reviews.
-- **Data Handling**: I used the drift database library for the local encrypted NoSQL database where logged sentiment scores are stored. I needed drift because the application architecture required the Windows logging process to run in its own separate isolate (thread), and drift supports this cross-isolate functionality.
-- **Platform Integration**: Implementing the sentence capture required deep integration with platform-specific APIs: I used the Win32 API (specifically, keyboard and mouse hooks) for Windows, and the Android Accessibility API for Android event tracking.
+- **Développement frontend et multiplateforme** : J'ai développé l'application entière en utilisant Dart et Flutter. J'ai choisi Flutter car il compile efficacement vers Windows et Android sans nécessiter de modifications majeures du code, tout en me permettant d'utiliser facilement les API système natives pour les fonctionnalités principales.
+- **Traitement du langage naturel (NLP)** : TensorFlow Lite était mon choix pour l'apprentissage automatique. Il prend entièrement en charge toutes les plateformes Flutter et, surtout, fonctionne entièrement hors ligne et localement sur l'appareil, respectant l'exigence stricte de confidentialité. J'ai utilisé un modèle de classification de sentiment binaire entraîné sur environ 50 000 critiques de films positives et négatives.
+- **Gestion des données** : J'ai utilisé la bibliothèque de base de données drift pour la base de données NoSQL chiffrée locale où les scores de sentiment enregistrés sont stockés. J'avais besoin de drift car l'architecture de l'application nécessitait que le processus de journalisation Windows s'exécute dans son propre isolate séparé (thread), et drift prend en charge cette fonctionnalité inter-isolates.
+- **Intégration de plateforme** : L'implémentation de la capture de phrases nécessitait une intégration profonde avec des API spécifiques à la plateforme : j'ai utilisé l'API Win32 (en particulier, les hooks clavier et souris) pour Windows, et l'API d'accessibilité Android pour le suivi des événements Android.
 
-## Challenges and Learnings
+## Défis et apprentissages
 
-The initial scoring algorithm, which simply calculated the average of all sentiment scores within an hour, was heavily biased toward neutrality (hovering around 45–50%). This meant the scores often failed to match my actual perceived mood when using the applications. I solved this by implementing an occurrence-based algorithm. Instead of a pure average, this algorithm counts how many times the generated score is above 45% versus below or equal to 45%. This single adjustment made the calculated scores far more accurate in reflecting the emotional sentiment during typing.
-Furthermore, integrating the system APIs was technically challenging. For instance, on Windows, I had to configure the logger to consider a sentence complete only upon pressing the enter key or if typing paused for over 10 seconds. On the Android side, due to API limitations, I had to trigger logging when the text box character count reached 1.
-Finally, while Flutter supports many platforms, I determined that supporting iOS was outside the project scope because established APIs for text tracking are non-existent, meaning I would have required complex workarounds like building a custom keyboard, which also presents significant hurdles for privacy compliance and publishing on the Apple App Store.
+L'algorithme de notation initial, qui calculait simplement la moyenne de tous les scores de sentiment dans une heure, était fortement biaisé vers la neutralité (oscillant autour de 45-50%). Cela signifiait que les scores ne correspondaient souvent pas à mon humeur perçue réelle lors de l'utilisation des applications. J'ai résolu cela en implémentant un algorithme basé sur les occurrences. Au lieu d'une moyenne pure, cet algorithme compte combien de fois le score généré est supérieur à 45% par rapport à inférieur ou égal à 45%. Ce seul ajustement a rendu les scores calculés beaucoup plus précis dans le reflet du sentiment émotionnel pendant la saisie.
+De plus, l'intégration des API système était techniquement difficile. Par exemple, sur Windows, j'ai dû configurer l'enregistreur pour considérer une phrase complète uniquement lors de l'appui sur la touche Entrée ou si la saisie était interrompue pendant plus de 10 secondes. Du côté Android, en raison des limitations de l'API, j'ai dû déclencher l'enregistrement lorsque le nombre de caractères de la zone de texte atteignait 1.
+Enfin, bien que Flutter prenne en charge de nombreuses plateformes, j'ai déterminé que la prise en charge d'iOS était hors du cadre du projet car les API établies pour le suivi de texte sont inexistantes, ce qui signifie que j'aurais nécessité des solutions de contournement complexes comme la construction d'un clavier personnalisé, ce qui présente également des obstacles importants pour la conformité à la confidentialité et la publication sur l'Apple App Store.
 
-## Outcome
+## Résultat
 
-Negate was a success, achieving its objective of creating a functional product for mood tracking based on device usage and sentiment analysis.
-The architecture I designed offers strong flexibility, making it trivial to substitute the existing binary sentiment model with other binary classification models in the future—for example, a model trained to detect signs of anxiety or depression. The user interface, built with Flutter, adheres to the Material UI 3 design language and was highly praised for its consistent and polished look.
-I gained invaluable, hands-on experience utilizing complex Windows and Android system APIs effectively within the Flutter environment. While Negate provides useful personal insight into which applications influence mood, I must stress that the tool is strictly for personal awareness and is not a medical device capable of providing diagnosis or medical advice.
+Negate a été un succès, atteignant son objectif de créer un produit fonctionnel pour le suivi de l'humeur basé sur l'utilisation de l'appareil et l'analyse de sentiment.
+L'architecture que j'ai conçue offre une forte flexibilité, rendant trivial le remplacement du modèle de sentiment binaire existant par d'autres modèles de classification binaire à l'avenir—par exemple, un modèle entraîné pour détecter des signes d'anxiété ou de dépression. L'interface utilisateur, construite avec Flutter, adhère au langage de conception Material UI 3 et a été très appréciée pour son apparence cohérente et soignée.
+J'ai acquis une expérience pratique inestimable en utilisant efficacement des API système Windows et Android complexes dans l'environnement Flutter. Bien que Negate fournisse des informations personnelles utiles sur les applications qui influencent l'humeur, je dois souligner que l'outil est strictement destiné à la sensibilisation personnelle et n'est pas un dispositif médical capable de fournir un diagnostic ou des conseils médicaux.
 
-[![Google Play link](https://raw.githubusercontent.com/steverichey/google-play-badge-svg/master/img/en_get.svg)](https://play.google.com/store/apps/details?id=com.kevinx8.negate)
+[![Lien Google Play](https://raw.githubusercontent.com/steverichey/google-play-badge-svg/master/img/en_get.svg)](https://play.google.com/store/apps/details?id=com.kevinx8.negate)
