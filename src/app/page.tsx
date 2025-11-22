@@ -15,6 +15,7 @@ import { home, about, person, baseURL, routes } from "@/resources";
 import { Mailchimp } from "@/components";
 import { Projects } from "@/components/work/Projects";
 import { Posts } from "@/components/blog/Posts";
+import {redirect, RedirectType} from "next/navigation";
 
 export async function generateMetadata() {
   return Meta.generate({
@@ -27,6 +28,30 @@ export async function generateMetadata() {
 }
 
 export default function Home() {
+    // Sends English Speakers and non-French Speakers to the English Page.
+    const userLanguage = navigator.language;
+    if (userLanguage) {
+        const frenchPreferred = userLanguage.toLowerCase().includes("fr");
+        const englishPreferred = userLanguage.toLowerCase().includes("en");
+        let knowsEnglish = englishPreferred;
+        let knowsFrench = frenchPreferred;
+        if (!frenchPreferred && !englishPreferred) {
+            const userLanguages = navigator.languages;
+            if (userLanguages) {
+                for (const lang of userLanguages) {
+                    if (lang.toLowerCase().includes("en")) {
+                        knowsEnglish = true;
+                    } else if (lang.toLowerCase().includes("fr")) {
+                        knowsFrench = true;
+                        break;
+                    }
+                }
+            }
+        }
+        if (!knowsFrench) {
+            redirect("https://paulis.gributs.com/",RedirectType.replace);
+        }
+    }
   return (
     <Column maxWidth="m" gap="xl" paddingY="12" horizontal="center">
       <Schema
