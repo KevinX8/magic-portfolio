@@ -1,0 +1,45 @@
+---
+title: "Création d'une présence numérique pour Attrape-Rêves International, une organisation à but non lucratif pour les Amérindiens"
+publishedAt: "2025-11-24"
+summary: "Mon expérience dans la création d'un site web et d'une page de dons pour une organisation à but non lucratif dont la mission est de soutenir les populations amérindiennes vivant dans la détresse et la pauvreté dans les réserves."
+images:
+  - "/images/projects/project-01/cover-03.jpg"
+team:
+  - name: "Paulis Gributs"
+role: "Ingénieur Frontend"
+avatar: "/images/avatar.jpg"
+linkedIn: "https://www.linkedin.com/in/paulis-gributs/"
+link: "https://attraperevesint.fr/"
+---
+
+## Vue d'ensemble
+
+Mon travail avec [Attrape-Rêves International](https://attraperevesint.fr/nous-connaitre) s'est concentré sur la création d'une présence web complète pour cette association caritative française dédiée au soutien des populations amérindiennes dans les réserves Navajo, Hopi, Zuni et Apache. L'organisation, établie en 2025, avait besoin d'une plateforme numérique pour amplifier leur mission de fourniture d'un soutien essentiel—des fournitures scolaires et l'accès à l'eau potable au chauffage pendant les hivers rigoureux—aux communautés autochtones confrontées à des difficultés.
+Le projet consistait fondamentalement à traduire leur vision humanitaire en un site web fonctionnel et accessible qui pourrait faciliter efficacement les dons et communiquer leur cause au public français. J'ai développé l'ensemble de la plateforme en utilisant ReactJS, Figma et Tailwind CSS, transformant les concepts de design initiaux en une plateforme de dons en ligne qui a depuis traité plus de 500 contributions.
+
+## Fonctionnalités clés
+
+- **Intégration transparente des dons** : J'ai intégré HelloAsso, une plateforme de dons française de premier plan, directement dans le site web. Cette intégration était cruciale pour les opérations de l'association, permettant un traitement des dons sécurisé et conforme tout en maintenant une expérience utilisateur fluide. La plateforme gère tout le traitement des paiements, la génération de reçus et la gestion des donateurs dans le cadre réglementaire français.
+- **Philosophie de design responsive** : J'ai construit l'interface pour qu'elle soit entièrement responsive sur tous les types d'appareils, mais avec une attention particulière aux écrans plus anciens et à basse résolution. Beaucoup de supporters de l'association utilisent des appareils obsolètes—des ordinateurs portables bas de gamme et des moniteurs de l'époque des années 2000—j'ai donc veillé à ce que le site reste fonctionnel et visuellement cohérent même à des résolutions peu communes.
+- **Architecture d'information claire** : La structure du site privilégie le message central de l'association avec des sections dédiées : "Nous connaître", "Notre Action" et "Nos Campagnes". Chaque section communique le travail de l'organisation avec l'organisation partenaire Native American Emergency Relief et leur focus sur le soutien durable des communautés des réserves.
+- **Identité professionnelle** : L'utilisation de Figma pour la phase de design a permis une itération rapide et des cycles de retours clients. Le design final reflète les valeurs de l'organisation tout en maintenant une crédibilité professionnelle—important pour construire la confiance des donateurs et répondre aux attentes d'une association opérant selon la loi française sur les associations (loi 1901).
+
+## Technologies utilisées
+
+- **Développement front-end** : J'ai choisi ReactJS pour son architecture basée sur les composants, ce qui a facilité la création d'éléments UI réutilisables et le maintien de la cohérence entre les pages. Le DOM virtuel de React a également assuré des performances fluides même sur des appareils plus anciens avec une puissance de traitement limitée.
+- **Framework de stylisation** : Tailwind CSS a été instrumental pour atteindre les objectifs de design responsive. Son approche utility-first m'a permis de prototyper rapidement différentes configurations de mise en page et d'affiner la réactivité sans écrire de CSS personnalisé extensif. Cela a été particulièrement précieux lors du traitement des exigences inhabituelles de viewport pour les appareils obsolètes.
+- **Design et prototypage** : Figma a servi d'outil de design collaboratif tout au long du processus de développement de deux mois. Il a permis au client de visualiser les concepts tôt, de fournir des retours sur les mises en page et les flux utilisateurs, et d'approuver les décisions de design avant que je ne consacre du temps de développement à l'implémentation.
+- **Intégration de la plateforme de dons** : L'intégration de l'API HelloAsso a nécessité une attention particulière au flux utilisateur—s'assurer que les donateurs pouvaient contribuer sans quitter le contexte visuel du site tout en complétant des transactions sécurisées via l'infrastructure de paiement de confiance de HelloAsso.
+
+## Défis et apprentissages
+
+Le défi technique le plus important était d'assurer une véritable scalabilité sur tout le spectre des résolutions d'affichage, en ciblant particulièrement les matériels plus anciens encore répandus parmi le public de l'association. Les points de rupture responsive standard (mobile, tablette, desktop) étaient insuffisants. J'ai dû créer des règles CSS supplémentaires ciblant des résolutions comme 1024×768 et même 800×600, testant extensivement sur des machines virtuelles exécutant d'anciens systèmes d'exploitation pour vérifier que le texte restait lisible et les éléments interactifs restaient accessibles.
+Cela a nécessité des décisions stratégiques concernant la taille des polices, les dimensions des boutons et la hiérarchie du contenu. Par exemple, j'ai implémenté un système de typographie fluide qui s'adaptait gracieusement plutôt que de sauter entre des tailles fixes aux points de rupture. La navigation devait se réduire intelligemment sur les petits écrans tout en restant découvrable, et l'appel à l'action pour les dons devait rester proéminent sans submerger l'espace d'écran limité.
+Travailler directement avec le client pendant deux mois m'a appris l'importance du développement itératif dans le secteur non lucratif. Les parties prenantes des associations ont souvent des connaissances techniques limitées mais une compréhension profonde des besoins de leur public. J'ai appris à traduire leur langage axé sur la mission en exigences techniques et, inversement, à présenter les contraintes techniques en termes d'impact utilisateur plutôt que de détails d'implémentation.
+Enfin, l'intégration de HelloAsso a nécessité de comprendre les réglementations françaises sur les dons et de s'assurer que le site respectait les normes d'accessibilité attendues des plateformes caritatives publiques. Cela signifiait implémenter des labels ARIA appropriés, s'assurer que la navigation au clavier fonctionnait partout, et vérifier que le flux de dons était clair même pour les utilisateurs ayant une littératie numérique limitée.
+
+## Résultat
+
+Le site web a été lancé avec succès et a facilité plus de 500 dons, établissant un canal de collecte de fonds numérique durable pour Attrape-Rêves International. La plateforme permet à l'organisation d'atteindre efficacement les donateurs français tout en communiquant leur partenariat avec Native American Emergency Relief et leur focus sur le soutien à long terme et digne des communautés des réserves.
+L'architecture responsive que j'ai construite garantit que le site reste accessible à la base diversifiée de supporters de l'association, des jeunes professionnels sur smartphones aux donateurs plus âgés utilisant des ordinateurs de bureau vieux de dix ans. Le design épuré et professionnel établit la crédibilité tandis que l'intégration HelloAsso supprime les barrières techniques au don.
+Au-delà des livrables techniques immédiats, ce projet a renforcé l'importance de comprendre les utilisateurs finaux au-delà des personas typiques. Concevoir pour des contraintes réelles—matériel obsolète, littératie numérique variable, conformité réglementaire—produit des applications web plus résilientes et inclusives. Le site web sert maintenant de fondation numérique durable pour la mission humanitaire d'Attrape-Rêves International, connectant les donateurs français avec les communautés amérindiennes dans le besoin.
