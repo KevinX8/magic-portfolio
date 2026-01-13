@@ -51,6 +51,7 @@ import {
     FaWhatsapp,
     FaX,
     FaXTwitter,
+    FaInstagram,
 } from "react-icons/fa6";
 import {TbBrandCSharp} from "react-icons/tb";
 import {FaDog, FaJava} from "react-icons/fa";
